@@ -1,0 +1,45 @@
+add_newline = true
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+
+[git_branch]
+format = "[$branch]($style) "
+# format = "[$symbol$branch]($style) "
+
+[golang]
+format = "[$symbol()]($style)"
+
+[python]
+python_binary = "python3"
+
+[cmd_duration]
+format = "[$duration]($style) "
+min_time = 3_000
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[✗](bold red)"
+vicmd_symbol = "[V](bold blue)"
+
+[username]
+style_user = "yellow bold"
+style_root = "black bold"
+format = "[$user@]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format =  "[$hostname](bold yellow) "
+disabled = false
+
+[package]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[aws]
+disabled = true

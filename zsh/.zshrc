@@ -76,10 +76,12 @@ man() {
 }
 
 # Load zsh-syntax-highlighting; should be last.
-source ~/.zinit/bin/zinit.zsh
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-syntax-highlighting
+if [ -f ~/.zinit/bin/zinit.zsh ]; then
+  source ~/.zinit/bin/zinit.zsh
+  zinit light zsh-users/zsh-completions
+  zinit light zsh-users/zsh-autosuggestions
+  zinit light zsh-users/zsh-syntax-highlighting
+fi
 
 eval "$(starship init zsh)"
 
