@@ -1,6 +1,16 @@
+- defaults:
+    link:
+      create: true
+      force: true
+      relink: true
+       
+
 - clean: ['~']
 
 - link:
-    ~/.gitconfig: gitconfig
+    ~/.gitconfig:
+      path: git/gitconfig
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
 
