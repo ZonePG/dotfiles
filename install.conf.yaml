@@ -10,6 +10,8 @@
 - link:
     ~/.gitconfig:
       path: git/.gitconfig
+    ~/.gitignore_global:
+      path: git/.gitignore_global
     ~/.zshrc:
       path: .zshrc
     ~/.config/zsh:

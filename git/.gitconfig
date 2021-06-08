@@ -3,3 +3,5 @@
 	email = 619586533@qq.com
 [init]
 	defaultBranch = main
+[core]
+	excludesfile = ~/.gitignore_global
