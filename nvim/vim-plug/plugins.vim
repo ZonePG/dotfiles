@@ -31,6 +31,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'honza/vim-snippets'
   Plug 'Pablo1107/codi.vim'
   Plug 'brooth/far.vim'
+  Plug 'neomake/neomake'
 
 call plug#end()
 
