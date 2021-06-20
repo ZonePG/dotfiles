@@ -40,6 +40,7 @@
     "--max-line-length=248"
   ],
   "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/Users/zoupeng/Library/Python/3.9/bin/black",
   "python.pythonPath": "/opt/homebrew/bin/python3",
   // snippets config
   // "snippets.ultisnips.directories": [

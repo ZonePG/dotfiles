@@ -28,3 +28,7 @@ export PATH=/opt/toolchain/mips-gcc-4.8.1/bin:$PATH
 
 # zsh color
 export CLICOLOR=1
+
+# qemu
+export PATH=/opt/qemu/build:$PATH
+export PATH=/opt/qemu/build/riscv64-softmmu:$PATH
