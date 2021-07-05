@@ -30,5 +30,9 @@ export PATH=/opt/toolchain/mips-gcc-4.8.1/bin:$PATH
 export CLICOLOR=1
 
 # qemu
-export PATH=/opt/qemu/build:$PATH
-export PATH=/opt/qemu/build/riscv64-softmmu:$PATH
+# export PATH=/opt/qemu/build:$PATH
+# export PATH=/opt/qemu/build/riscv64-softmmu:$PATH
+# export PATH=/opt/qemu/build/riscv32-softmmu:$PATH
+export PATH=/opt/qemu-5.1.0/build/:$PATH
+export PATH=/opt/qemu-5.1.0/build/riscv64-softmmu:$PATH
+export PATH=/opt/qemu-5.1.0/build/riscv32-softmmu:$PATH
