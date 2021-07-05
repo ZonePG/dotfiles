@@ -17,7 +17,9 @@ source $HOME/.config/nvim/keys/which-key.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/codi.vim
 source $HOME/.config/nvim/plug-config/neomake.vim
-luafile $HOME/.config/nvim/lua/plug-colorizer.lua
+" source $HOME/.config/nvim/plug-config/lsp-config.vim
+luafile $HOME/.config/nvim/lua/plugins/plug-colorizer.lua
+" luafile $HOME/.config/nvim/lua/plugins/comp-config.lua
 
 """"""""""Some autocmd"""""""""
 augroup mygroup
@@ -40,4 +42,42 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
+"
+
+lua <<EOF
+require'nvim-treesitter.install'.compilers = {'clang++'}
+require'lspconfig'.sumneko_lua.setup {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+}
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all",
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    custom_captures = {
+      -- [""] = "<highlight group>",
+      ["keyword"] = "TSString",
+    },
+  },
+
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+    },
+  },
+
+  indent = {
+    enable = true
+  },
+}
+EOF
 
