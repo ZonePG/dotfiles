@@ -57,5 +57,5 @@ return require("packer").startup(function(use)
     -- quick fix
     use 'kevinhwang91/nvim-bqf'
 
-    -- use 'airblade/vim-rooter'
+    use 'airblade/vim-rooter'
 end)
