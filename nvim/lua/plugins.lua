@@ -36,6 +36,8 @@ return require("packer").startup(function(use)
     use 'kyazdani42/nvim-tree.lua'
     use 'hrsh7th/vim-vsnip'
     use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
+    use 'nvim-treesitter/playground'
+    use 'p00f/nvim-ts-rainbow'
     use 'kyazdani42/nvim-web-devicons'
     use 'glepnir/galaxyline.nvim'
     -- telescope
@@ -58,4 +60,12 @@ return require("packer").startup(function(use)
     use 'kevinhwang91/nvim-bqf'
 
     use 'airblade/vim-rooter'
+
+    -- theme
+    use 'joshdick/onedark.vim'
+
+    use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
+
+    -- git
+    use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 end)

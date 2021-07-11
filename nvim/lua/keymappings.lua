@@ -52,4 +52,4 @@ vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true,
 vim.api.nvim_set_keymap('n', '<Space>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
 -- close buffer
-vim.api.nvim_set_keymap('n', '<Leader>w', ':vsplit<CR>:bprevious<CR><C-w>l:bd<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>w', ':vsplit<CR>:bprevious<CR><C-w>h:bd<CR>', { noremap = true, silent = true })
