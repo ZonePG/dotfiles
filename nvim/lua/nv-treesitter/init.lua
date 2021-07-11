@@ -12,6 +12,6 @@ require'nvim-treesitter.configs'.setup {
     persist_queries = false
   },
   rainbow = {
-    enable = false
+    enable = true
   }
 }
