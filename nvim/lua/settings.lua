@@ -1,4 +1,4 @@
--- vim.o.iskeyword="+=-"                     -- treat dash separated words as a word text object"
+-- vim.o.keyword="+=-"                     -- treat dash separated words as a word text object"
 -- vim.o.shortmess="+=c"                     -- Don't pass message to |ins-completion-menu|.
 -- vim.o.formatoptions="-=cro"                  -- Stop newline continution of comments
 vim.o.hidden=true                              -- Required to keep multiple buffers open multiple buffers
