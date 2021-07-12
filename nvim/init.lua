@@ -14,8 +14,9 @@ require('nv-gitsigns')
 require('nv-autopairs')
 
 -- LSP
--- require('lsp.lua-ls')
--- require('lsp.js-ts-ls')
--- require('lsp.python-ls')
--- require('lsp.clangd-ls')
 require('lsp')
+require('lsp.lua-ls')
+require('lsp.python-ls')
+require('lsp.bash-ls')
+require('lsp.go-ls')
+-- require('lsp.clangd-ls')

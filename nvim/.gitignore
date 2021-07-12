@@ -2,3 +2,4 @@ autoload/
 .netrwhist
 session/
 plugin/
+ls/
