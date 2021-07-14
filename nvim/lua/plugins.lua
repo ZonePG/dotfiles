@@ -84,4 +84,13 @@ return require("packer").startup(function(use)
     use 'kevinhwang91/nvim-bqf'
     use 'airblade/vim-rooter'
     use 'windwp/nvim-autopairs'
+
+    -- which key
+    use {
+      "folke/which-key.nvim",
+      config = function()
+      require("core.which-key").setup()
+      end,
+      event = "BufWinEnter",
+    }
 end)
