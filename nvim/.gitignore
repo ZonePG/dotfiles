@@ -1,3 +1,5 @@
 autoload/
 .netrwhist
 session/
+ls/
+plugin/
