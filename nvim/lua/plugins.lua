@@ -31,60 +31,71 @@ end
 -- vim.cmd "autocmd BufWritePost plugins.lua PackerCompile" -- Auto compile when there are changes in plugins.lua
 
 return require("packer").startup(function(use)
-    -- Packer can manage itself as an optional plugin
-    use {"wbthomason/packer.nvim", opt = true}
+  -- Packer can manage itself as an optional plugin
+  use {"wbthomason/packer.nvim", opt = true}
 
-    -- LSP
-    use 'neovim/nvim-lspconfig'
-    use 'glepnir/lspsaga.nvim'
-    use 'onsails/lspkind-nvim'
-    use 'kosayoda/nvim-lightbulb'
-    use 'mfussenegger/nvim-jdtls'
-    use 'kabouzeid/nvim-lspinstall'
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'glepnir/lspsaga.nvim'
+  use 'onsails/lspkind-nvim'
+  use 'kosayoda/nvim-lightbulb'
+  use 'mfussenegger/nvim-jdtls'
+  use 'kabouzeid/nvim-lspinstall'
 
-    -- Debugging
-    use 'mfussenegger/nvim-dap'
+  -- Debugging
+  use 'mfussenegger/nvim-dap'
 
-    -- Information
-    use 'nanotee/nvim-lua-guide'
+  -- Information
+  use 'nanotee/nvim-lua-guide'
 
-    -- Explorer
-    use 'kyazdani42/nvim-tree.lua'
+  -- Explorer
+  use 'kyazdani42/nvim-tree.lua'
 
-    -- Treesitter
-    use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
-    use 'nvim-treesitter/playground'
-    use { 'p00f/nvim-ts-rainbow' }
-    use 'kyazdani42/nvim-web-devicons'
+  -- Treesitter
+  use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
+  use 'nvim-treesitter/playground'
+  use { 'p00f/nvim-ts-rainbow' }
+  use 'kyazdani42/nvim-web-devicons'
 
-    -- StatusLine and Bufferline
-    use 'glepnir/galaxyline.nvim'
-    use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
+  -- StatusLine and Bufferline
+  use 'glepnir/galaxyline.nvim'
+  use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
 
-    -- telescope
-    use 'nvim-lua/popup.nvim'
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-telescope/telescope.nvim'
-    use 'nvim-telescope/telescope-media-files.nvim'
+  -- telescope
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
 
-    -- Intellisense
-    use 'hrsh7th/nvim-compe'
-    use 'hrsh7th/vim-vsnip'
+  -- Intellisense
+  use 'hrsh7th/nvim-compe'
+  use 'hrsh7th/vim-vsnip'
 
-    -- Color
-    use 'norcalli/nvim-colorizer.lua'
-    use 'navarasu/onedark.nvim'
+  -- Color
+  use 'norcalli/nvim-colorizer.lua'
+  use 'navarasu/onedark.nvim'
 
-    -- Git
-    use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  -- Git
+  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
 
-    -- General Plugins
-    use 'kevinhwang91/nvim-bqf'
-    use 'airblade/vim-rooter'
-    use 'windwp/nvim-autopairs'
+  -- General Plugins
+  use 'kevinhwang91/nvim-bqf'
+  use 'airblade/vim-rooter'
+  use 'windwp/nvim-autopairs'
 
-    -- which key
-    use 'folke/which-key.nvim'
+  -- which key
+  use 'folke/which-key.nvim'
+
+  -- Comments
+  use "terrortylor/nvim-comment"
+  require('nvim_comment').setup()
+
+  -- formmatter
+  use 'mhartington/formatter.nvim'
+
+  -- lint
+  use 'mfussenegger/nvim-lint'
+
 end)

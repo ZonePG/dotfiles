@@ -1,5 +1,27 @@
 local wk = require("which-key")
 
+local opts = {
+  mode = "n", -- NORMAL mode
+  prefix = ",",
+  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
+}
+
+local vopts = {
+  mode = "v", -- VISUAL mode
+  prefix = ",",
+  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
+}
+
+local vmappings = {
+  ["/"] = { ":CommentToggle<CR>", "Comment" },
+}
+
 wk.setup {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
@@ -44,6 +66,8 @@ wk.register({
   ["o"] = { '<cmd>only<CR>', "only: close-all-other-windows" },
   ["."] = { '<cmd>vsplit $MYVIMRC<CR>', "open-init.lua" },
   [";"] = { ':vsplit ~/.config/zsh/.zshrc<CR>', "open-zsh" },
+  ["/"] = { ":CommentToggle<CR>", "Comment" },
+  ["f"] = { ":Format<CR>", "formatter" },
 
   s = {
     name = "Search",
@@ -85,4 +109,6 @@ wk.register({
     },
   },
 
-}, { prefix = "," })
+}, opts)
+
+wk.register(vmappings, vopts)

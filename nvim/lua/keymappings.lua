@@ -45,9 +45,6 @@ vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Space>', '<Nop>', {noremap = true, silent = true})
 vim.g.mapleader = ','
 
--- disable highlight
-vim.api.nvim_set_keymap('n', '<Leader>h', ':nohlsearch<CR>', {noremap = true, silent = true})
-
 -- explore
 vim.api.nvim_set_keymap('n', '<Space>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 

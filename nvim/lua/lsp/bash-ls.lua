@@ -1,3 +1,3 @@
 require'lspconfig'.bashls.setup{
-  autostart = true
+  on_attach = require'lsp'.common_on_attach
 }
