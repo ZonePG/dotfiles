@@ -54,7 +54,7 @@ return require("packer").startup(function(use)
     -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
     use 'nvim-treesitter/playground'
-    use 'p00f/nvim-ts-rainbow'
+    use { 'p00f/nvim-ts-rainbow' }
     use 'kyazdani42/nvim-web-devicons'
 
     -- StatusLine and Bufferline
@@ -73,7 +73,7 @@ return require("packer").startup(function(use)
 
     -- Color
     use 'norcalli/nvim-colorizer.lua'
-    use 'joshdick/onedark.vim'
+    use 'navarasu/onedark.nvim'
 
     -- Git
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
@@ -86,11 +86,5 @@ return require("packer").startup(function(use)
     use 'windwp/nvim-autopairs'
 
     -- which key
-    use {
-      "folke/which-key.nvim",
-      config = function()
-      require("core.which-key").setup()
-      end,
-      event = "BufWinEnter",
-    }
+    use 'folke/which-key.nvim'
 end)

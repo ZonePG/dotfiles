@@ -1,4 +1,4 @@
-vim.cmd('autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" } })')
+-- vim.cmd('autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" } })')
 
 vim.cmd('hi Comment cterm=italic')
 vim.cmd('let g:onedark_hide_endofbuffer=1')

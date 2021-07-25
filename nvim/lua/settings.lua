@@ -32,3 +32,4 @@ vim.o.timeoutlen=500                      -- By default timeoutlen is 1000 ms
 vim.o.clipboard="unnamedplus"               -- Copy paste between vim and everything else
 vim.o.incsearch=true                -- set/word
 vim.o.autochdir=true                           -- Your working directory will always be the same as your working directory
+vim.o.timeoutlen=100

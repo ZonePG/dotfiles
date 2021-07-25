@@ -12,6 +12,7 @@ require('nv-galaxyline')
 require('nv-bufferline')
 require('nv-gitsigns')
 require('nv-autopairs')
+require('nv-which-key')
 
 -- LSP
 require('lsp')
