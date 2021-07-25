@@ -68,6 +68,8 @@ wk.register({
   [";"] = { ':vsplit ~/.config/zsh/.zshrc<CR>', "open-zsh" },
   ["/"] = { ":CommentToggle<CR>", "Comment" },
   ["f"] = { ":Format<CR>", "formatter" },
+  ["q"] = { "<cmd>q!<CR>", "Quit" },
+
 
   s = {
     name = "Search",
