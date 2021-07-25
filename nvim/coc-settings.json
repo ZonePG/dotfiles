@@ -47,7 +47,7 @@
   //   "UltiSnips",
   //   "~/.config/nvim/utils/snips"
   // ],
-  "rust-analyzer.server.path": "/opt/homebrew/Cellar/rust-analyzer/2021-05-03/bin/rust-analyzer",
+  "rust-analyzer.server.path": "/opt/homebrew/Cellar/rust-analyzer/2021-07-12/bin/rust-analyzer",
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
   // explorer
   "explorer.width": 30,
