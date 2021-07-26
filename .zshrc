@@ -15,3 +15,5 @@ export SDKMAN_DIR="/Users/zoupeng/.sdkman"
 [[ -s "/Users/zoupeng/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/zoupeng/.sdkman/bin/sdkman-init.sh"
 
 [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
+
+alias luamake=/Users/zoupeng/.config/nvim/lua-language-server/3rd/luamake/luamake
