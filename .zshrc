@@ -17,3 +17,5 @@ export SDKMAN_DIR="/Users/zoupeng/.sdkman"
 [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
 
 alias luamake=/Users/zoupeng/.config/nvim/lua-language-server/3rd/luamake/luamake
+
+alias aq=asciiquarium

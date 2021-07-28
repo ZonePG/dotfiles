@@ -36,3 +36,5 @@ export CLICOLOR=1
 export PATH=/opt/qemu-5.1.0/build/:$PATH
 export PATH=/opt/qemu-5.1.0/build/riscv64-softmmu:$PATH
 export PATH=/opt/qemu-5.1.0/build/riscv32-softmmu:$PATH
+
+export PATH="/Applications/Racket v8.2/bin:$PATH"
