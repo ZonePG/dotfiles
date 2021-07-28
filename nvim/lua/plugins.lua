@@ -98,4 +98,7 @@ return require("packer").startup(function(use)
   -- lint
   use 'mfussenegger/nvim-lint'
 
+  -- dashboard
+  use 'glepnir/dashboard-nvim'
+
 end)

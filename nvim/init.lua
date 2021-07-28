@@ -16,6 +16,7 @@ require('nv-telescope')
 require('nv-which-key')
 require('nv-formattter')
 -- require('nv-lint')
+require('nv-dashboard')
 
 -- LSP
 require('lsp')
@@ -33,3 +34,4 @@ require('lsp.cmake-ls')
 require('lsp.rust-ls')
 require('lsp.tex-ls')
 require('lsp.docker-ls')
+require('lsp.racket-ls')

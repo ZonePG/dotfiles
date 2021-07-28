@@ -40,6 +40,10 @@ vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true })
 
 -- Tab Complete
 -- vim.api.nvim_set_keymap('i', '<expr><TAB>', 'pumvisible() ? \"\\<C-n>\" : \"\\<TAB>\"', { noremap = true, silent = true })
+-- navigate tab completion with <c-j> and <c-k>
+-- runs conditionally
+vim.cmd 'inoremap <expr> <C-j> pumvisible() ? "\\<C-n>" : "\\<C-j>"'
+vim.cmd 'inoremap <expr> <C-k> pumvisible() ? "\\<C-p>" : "\\<C-k>"'
 
 
 vim.api.nvim_set_keymap('n', '<Space>', '<Nop>', {noremap = true, silent = true})
