@@ -38,3 +38,6 @@ export PATH=/opt/qemu-5.1.0/build/riscv64-softmmu:$PATH
 export PATH=/opt/qemu-5.1.0/build/riscv32-softmmu:$PATH
 
 export PATH="/Applications/Racket v8.2/bin:$PATH"
+
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH

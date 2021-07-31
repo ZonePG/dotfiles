@@ -56,6 +56,7 @@ return require("packer").startup(function(use)
   use 'nvim-treesitter/playground'
   use { 'p00f/nvim-ts-rainbow' }
   use 'kyazdani42/nvim-web-devicons'
+  use 'nvim-treesitter/nvim-treesitter-refactor'
 
   -- StatusLine and Bufferline
   use 'glepnir/galaxyline.nvim'
@@ -100,5 +101,8 @@ return require("packer").startup(function(use)
 
   -- dashboard
   use 'glepnir/dashboard-nvim'
+
+  -- sqls
+  use 'nanotee/sqls.nvim'
 
 end)
