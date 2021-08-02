@@ -41,3 +41,4 @@ export PATH="/Applications/Racket v8.2/bin:$PATH"
 
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
+export PATH=/opt/homebrew/opt/sqlite3/bin:$PATH
