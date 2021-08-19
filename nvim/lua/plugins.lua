@@ -44,6 +44,7 @@ return require("packer").startup(function(use)
 
   -- Debugging
   use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
   -- Information
   use 'nanotee/nvim-lua-guide'
@@ -104,5 +105,8 @@ return require("packer").startup(function(use)
 
   -- sqls
   use 'nanotee/sqls.nvim'
+
+  -- rust
+  use 'simrat39/rust-tools.nvim'
 
 end)

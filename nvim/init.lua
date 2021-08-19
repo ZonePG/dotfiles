@@ -36,3 +36,8 @@ require('lsp.tex-ls')
 require('lsp.docker-ls')
 require('lsp.racket-ls')
 require('lsp.sql-ls')
+
+-- rust
+require('nv-dap')
+require('nv-dap-ui')
+require('nv-rust-tools')
