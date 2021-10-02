@@ -117,7 +117,7 @@ wk.register({
     c = { "<cmd>lua require'dap'.continue()<CR>", "continue" },
     n = { "<cmd>:lua require'dap'.step_over()<CR>", "step over" },
     s = { "<cmd>:lua require'dap'.step_into()<CR>", "step into" },
-    f = { "<cmd>:lua require'dap'.step_into()<CR>", "step out" },
+    f = { "<cmd>:lua require'dap'.step_out()<CR>", "step out" },
     b = { "<cmd>:lua require'dap'.toggle_breakpoint()<CR>", "toggle breakpoint" },
     B = { "<cmd>:lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", "set breakpoint" },
     p = { "<cmd>:lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", "set breakpoint log" },

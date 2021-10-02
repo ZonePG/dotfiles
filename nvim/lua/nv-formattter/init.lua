@@ -43,6 +43,17 @@ require("formatter").setup(
           }
         end
       },
+      c = {
+        -- clang-format
+        function()
+          return {
+            exe = "clang-format",
+            args = {},
+            stdin = true,
+            cwd = vim.fn.expand("%:p:h") -- Run clang-format in cwd of the file.
+          }
+        end
+      },
       go = {
         -- gofmt
         function()

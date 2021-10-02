@@ -1,6 +1,6 @@
--- --if not package.loaded['nvim-tree.view'] then
--- --  return
--- --end
+-- if not package.loaded['nvim-tree.view'] then
+--   return
+-- end
 --
 local M = {}
 local status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
@@ -83,5 +83,6 @@ M.toggle_tree = function()
     require("nvim-tree").find_file(true)
   end
 end
+require 'nvim-tree'.setup {}
 --
 return M

@@ -50,8 +50,13 @@ vim.api.nvim_set_keymap('n', '<Space>', '<Nop>', {noremap = true, silent = true}
 vim.g.mapleader = ','
 
 -- explore
-vim.api.nvim_set_keymap('n', '<Space>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<Space>f', ':NvimTreeFindFile<CR>', {noremap = true, silent = true})
+local nvim_tree_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/nvim-tree.lua"
+if vim.fn.empty(vim.fn.glob(nvim_tree_path)) > 0 then
+  vim.api.nvim_set_keymap('n', '<Space>e', ':Lexplore<CR>', {noremap = true, silent = true})
+else
+  vim.api.nvim_set_keymap('n', '<Space>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+  vim.api.nvim_set_keymap('n', '<Space>f', ':NvimTreeFindFile<CR>', {noremap = true, silent = true})
+end
 
 -- close buffer
 vim.api.nvim_set_keymap('n', '<Leader>w', ':vsplit<CR>:bprevious<CR><C-w>h:bd<CR>', { noremap = true, silent = true })
