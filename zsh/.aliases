@@ -8,4 +8,4 @@ alias gc="git commit"
 alias gl="git log --all --graph --decorate"
 alias mv="mv -i"
 alias aq=asciiquarium
-[ -f ~/.config/nvim/lua-language-server/3rd/luamake/luamake ] && alias luamake=/Users/zoupeng/.config/nvim/lua-language-server/3rd/luamake/luamake
+[ -f ~/.config/nvim/lua-language-server/3rd/luamake/luamake ] && alias luamake=~/.config/nvim/lua-language-server/3rd/luamake/luamake

@@ -48,20 +48,6 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 # autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line
 
-# codi
-codi() {
-   local syntax="${1:-python}"
-   shift
-   nvim -c \
-     "let g:startify_disable_at_vimenter = 1 |\
-     set bt=nofile ls=0 noru nonu nornu |\
-     hi CodiVirtualText guifg=red
-     hi ColorColumn ctermbg=NONE |\
-     hi VertSplit ctermbg=NONE |\
-     hi NonText ctermfg=0 |\
-     Codi $syntax" "$@"
-}
-
 # man color
 man() {
 	env \
@@ -85,4 +71,8 @@ fi
 
 eval "$(starship init zsh)"
 
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+if [[ `uname` == "Darwin" ]]; then
+  [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+elif [[ `uname` == "Linux" ]]; then
+  [ -f /usr/share/autojump/autojump.sh ] && . /usr/share/autojump/autojump.sh
+fi

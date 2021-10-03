@@ -11,7 +11,6 @@ vim.o.cmdheight=2                         -- More space for displaying messages
 vim.o.mouse="a"                             -- Enable your mouse
 vim.o.splitbelow=true                         -- Horizontal splits will automatically be below
 vim.o.splitright=true                          -- Vertical splits will automatically be to the right
--- vim.o.t_Co="256"                           -- Support 256 colors
 vim.o.conceallevel=0                      -- So that I can see `` in markdown files
 vim.o.tabstop=2                           -- Insert 2 spaces for a tab
 vim.o.shiftwidth=2                        -- Change the number of space characters inserted for indentation
