@@ -70,6 +70,7 @@ wk.register({
   ["f"] = { ":Format<CR>", "formatter" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["b"] = { ":! xelatex % && open -a Preview && open -a iTerm<CR>", "latex" },
+  ["w"] = { ":vsplit<CR>:bprevious<CR><C-w>h:bd<CR>", "delete current buffer" },
 
 
   s = {

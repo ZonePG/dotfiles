@@ -58,5 +58,3 @@ else
   vim.api.nvim_set_keymap('n', '<Space>f', ':NvimTreeFindFile<CR>', {noremap = true, silent = true})
 end
 
--- close buffer
-vim.api.nvim_set_keymap('n', '<Leader>w', ':vsplit<CR>:bprevious<CR><C-w>h:bd<CR>', { noremap = true, silent = true })
