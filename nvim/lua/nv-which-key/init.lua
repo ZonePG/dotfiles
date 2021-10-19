@@ -70,7 +70,7 @@ wk.register({
   ["f"] = { ":Format<CR>", "formatter" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["b"] = { ":! xelatex % && open -a Preview && open -a iTerm<CR>", "latex" },
-  ["w"] = { ":vsplit<CR>:bprevious<CR><C-w>h:bd<CR>", "delete current buffer" },
+  ["w"] = { ":vsplit<CR>:bprevious<CR><C-w>h:bd<CR>:NvimTreeFocus<CR><C-W>l", "delete current buffer" },
 
 
   s = {
