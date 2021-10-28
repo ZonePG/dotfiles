@@ -89,4 +89,6 @@ return require("packer").startup(function(use)
   -- rust
   use 'simrat39/rust-tools.nvim'
 
+  use 'github/copilot.vim'
+
 end)
