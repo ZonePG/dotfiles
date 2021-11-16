@@ -32,3 +32,5 @@ vim.o.clipboard="unnamedplus"               -- Copy paste between vim and everyt
 vim.o.incsearch=true                -- set/word
 vim.o.autochdir=true                           -- Your working directory will always be the same as your working directory
 vim.o.timeoutlen=100
+
+vim.cmd('let g:copilot_enabled=0')

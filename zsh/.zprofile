@@ -8,9 +8,14 @@ if [[ `uname` == "Darwin" ]]; then
   # iverilog
   export PATH=/Users/zoupeng/verilog/iverilog/installed/bin:$PATH
   export PATH=/Applications/gtkwave.app/Contents/Resources/bin/:$PATH
-  export PATH=/opt/homebrew/opt/llvm/bin:$PATH
+
+  # for taichi, comment select one
+  # export PATH=/opt/homebrew/opt/llvm/bin:$PATH
+  export PATH=/opt/toolchain/llvm-10.0.0-m1-for-taichi/bin:$PATH
+
   export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
   # mips
   export PATH=/opt/toolchain/mips-gcc-4.8.1/bin:$PATH
   # qemu
