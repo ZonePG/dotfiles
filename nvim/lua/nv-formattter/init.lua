@@ -68,7 +68,7 @@ require("formatter").setup(
         -- black
         function()
           return {
-            exe = "/Users/zoupeng/Library/Python/3.9/bin/black",
+            exe = "/opt/homebrew/bin/black",
             args = {"-"},
             stdin = true,
           }
