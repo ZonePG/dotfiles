@@ -60,7 +60,7 @@ require("formatter").setup(
           return {
             exe = "gofmt",
             args = {},
-            stdin = true,
+            stdin = true
           }
         end
       },
@@ -68,12 +68,22 @@ require("formatter").setup(
         -- black
         function()
           return {
-            exe = "/opt/homebrew/bin/black",
+            exe = "black",
             args = {"-"},
-            stdin = true,
+            stdin = true
           }
         end
       }
-    },
+    }
   }
+)
+
+vim.api.nvim_exec(
+  [[
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost *.go,*.lua FormatWrite
+augroup END
+]],
+  true
 )
