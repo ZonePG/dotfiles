@@ -1,7 +1,8 @@
 # alias
 alias vim="nvim"
 alias vi="nvim"
-alias ll="ls -la"
+alias ll="ls --color=auto -la"
+alias ls="ls --color=auto"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"

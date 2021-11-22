@@ -10,13 +10,16 @@ HISTFILE=~/.cache/zsh/.zsh_history
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/zoupeng/.sdkman"
-[[ -s "/Users/zoupeng/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/zoupeng/.sdkman/bin/sdkman-init.sh"
-
-[ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
 
 alias luamake=/home/zonepg/.config/nvim/ls/lua-language-server/3rd/luamake/luamake
+
+if [[ `uname` == "Darwin" ]]; then
+
+  #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+  export SDKMAN_DIR="/Users/zoupeng/.sdkman"
+  [[ -s "/Users/zoupeng/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/zoupeng/.sdkman/bin/sdkman-init.sh"
+  
+  [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -33,3 +36,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 conda activate public
+
+elif [[ `uname` == "Linux" ]]; then
+
+fi

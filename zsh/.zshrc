@@ -62,8 +62,8 @@ man() {
 }
 
 # Load zsh-syntax-highlighting; should be last.
-if [ -f ~/.zinit/bin/zinit.zsh ]; then
-  source ~/.zinit/bin/zinit.zsh
+if [ -f ~/.zinit/zinit.zsh ]; then
+  source ~/.zinit/zinit.zsh
   zinit light zsh-users/zsh-completions
   zinit light zsh-users/zsh-autosuggestions
   zinit light zsh-users/zsh-syntax-highlighting
@@ -74,5 +74,6 @@ eval "$(starship init zsh)"
 if [[ `uname` == "Darwin" ]]; then
   [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 elif [[ `uname` == "Linux" ]]; then
-  [ -f /usr/share/autojump/autojump.sh ] && . /usr/share/autojump/autojump.sh
+  [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
+  autoload -U compinit && compinit -u
 fi

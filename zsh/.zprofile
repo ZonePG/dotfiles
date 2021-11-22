@@ -28,12 +28,12 @@ if [[ `uname` == "Darwin" ]]; then
   export PATH="/Applications/Racket v8.2/bin:$PATH"
   export PATH=/opt/homebrew/opt/sqlite3/bin:$PATH
 elif [[ `uname` == "Linux" ]]; then
-  export windows_host=`cat /etc/resolv.conf|grep nameserver|awk '{print $2}'`
-  export ALL_PROXY=socks5://$windows_host:10808
-  export HTTP_PROXY=$ALL_PROXY
-  export http_proxy=$ALL_PROXY
-  export HTTPS_PROXY=$ALL_PROXY
-  export https_proxy=$ALL_PROXY
+  # export windows_host=`cat /etc/resolv.conf|grep nameserver|awk '{print $2}'`
+  # export ALL_PROXY=socks5://$windows_host:10808
+  # export HTTP_PROXY=$ALL_PROXY
+  # export http_proxy=$ALL_PROXY
+  # export HTTPS_PROXY=$ALL_PROXY
+  # export https_proxy=$ALL_PROXY
 fi
 
 export NVM_DIR="$HOME/.nvm"
