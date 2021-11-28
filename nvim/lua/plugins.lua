@@ -3,92 +3,99 @@ local fn = vim.fn
 
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
-
 if fn.empty(fn.glob(install_path)) > 0 then
-    execute("!git clone https://github.com/wbthomason/packer.nvim " ..
-                install_path)
-    execute "packadd packer.nvim"
+  execute("!git clone https://github.com/wbthomason/packer.nvim " .. install_path)
+  execute "packadd packer.nvim"
 end
 
-return require("packer").startup(function(use)
-  -- Packer can manage itself as an optional plugin
-  use {'wbthomason/packer.nvim', opt = true}
+return require("packer").startup(
+  function(use)
+    -- Packer can manage itself as an optional plugin
+    use {"wbthomason/packer.nvim", opt = true}
 
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'glepnir/lspsaga.nvim'
-  use 'onsails/lspkind-nvim'
-  use 'kosayoda/nvim-lightbulb'
-  use 'mfussenegger/nvim-jdtls'
-  use 'kabouzeid/nvim-lspinstall'
+    -- LSP
+    use "neovim/nvim-lspconfig"
+    use "kosayoda/nvim-lightbulb"
+    use "mfussenegger/nvim-jdtls"
+    use "kabouzeid/nvim-lspinstall"
 
-  -- Debugging
-  use 'mfussenegger/nvim-dap'
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    -- Debugging
+    use "mfussenegger/nvim-dap"
+    use {"rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
 
-  -- Information
-  use 'nanotee/nvim-lua-guide'
+    -- Information
+    use "nanotee/nvim-lua-guide"
 
-  -- Explorer
-  use 'kyazdani42/nvim-tree.lua'
+    -- Explorer
+    use "kyazdani42/nvim-tree.lua"
 
-  -- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" }
-  use 'nvim-treesitter/playground'
-  use 'p00f/nvim-ts-rainbow'
-  use 'kyazdani42/nvim-web-devicons'
-  use 'nvim-treesitter/nvim-treesitter-refactor'
+    -- Treesitter
+    use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+    use "nvim-treesitter/playground"
+    use "p00f/nvim-ts-rainbow"
+    use "kyazdani42/nvim-web-devicons"
+    use "nvim-treesitter/nvim-treesitter-refactor"
 
-  -- StatusLine and Bufferline
-  use 'glepnir/galaxyline.nvim'
-  use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
+    -- StatusLine and Bufferline
+    use "glepnir/galaxyline.nvim"
+    use {"akinsho/nvim-bufferline.lua", requires = "kyazdani42/nvim-web-devicons"}
 
-  -- telescope
-  use 'nvim-lua/popup.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
-  use 'nvim-telescope/telescope-media-files.nvim'
+    -- telescope
+    use "nvim-lua/popup.nvim"
+    use "nvim-lua/plenary.nvim"
+    use "nvim-telescope/telescope.nvim"
+    use "nvim-telescope/telescope-media-files.nvim"
 
-  -- Intellisense
-  use 'hrsh7th/nvim-compe'
-  use 'hrsh7th/vim-vsnip'
+    -- Intellisense
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-nvim-lua"
+    use "hrsh7th/cmp-nvim-lsp"
+    use "hrsh7th/cmp-cmdline"
 
-  -- Color
-  use 'norcalli/nvim-colorizer.lua'
-  use 'navarasu/onedark.nvim'
+    use "hrsh7th/cmp-vsnip"
+    use "hrsh7th/vim-vsnip"
 
-  -- Git
-  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+    use "ray-x/lsp_signature.nvim"
 
+    use "onsails/lspkind-nvim"
 
-  -- General Plugins
-  use 'kevinhwang91/nvim-bqf'
-  use 'airblade/vim-rooter'
-  use 'windwp/nvim-autopairs'
+    -- Color
+    use "norcalli/nvim-colorizer.lua"
+    use "navarasu/onedark.nvim"
 
-  -- which key
-  use 'folke/which-key.nvim'
+    -- Git
+    use {"lewis6991/gitsigns.nvim", requires = {"nvim-lua/plenary.nvim"}}
+    use {"TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim"}
 
-  -- Comments
-  use "terrortylor/nvim-comment"
-  require('nvim_comment').setup()
+    -- General Plugins
+    use "kevinhwang91/nvim-bqf"
+    use "airblade/vim-rooter"
+    use "windwp/nvim-autopairs"
 
-  -- formmatter
-  use 'mhartington/formatter.nvim'
+    -- which key
+    use "folke/which-key.nvim"
 
-  -- lint
-  use 'mfussenegger/nvim-lint'
+    -- Comments
+    use "terrortylor/nvim-comment"
+    require("nvim_comment").setup()
 
-  -- dashboard
-  use 'glepnir/dashboard-nvim'
+    -- formmatter
+    use "mhartington/formatter.nvim"
 
-  -- sqls
-  use 'nanotee/sqls.nvim'
+    -- lint
+    use "mfussenegger/nvim-lint"
 
-  -- rust
-  use 'simrat39/rust-tools.nvim'
+    -- dashboard
+    use "glepnir/dashboard-nvim"
 
-  use 'github/copilot.vim'
+    -- sqls
+    use "nanotee/sqls.nvim"
 
-end)
+    -- rust
+    use "simrat39/rust-tools.nvim"
+
+    use "github/copilot.vim"
+  end
+)
