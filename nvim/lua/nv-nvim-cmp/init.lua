@@ -82,10 +82,13 @@ cmp.setup(
       native_menu = false,
       ghost_text = false
     },
-    preselect = cmp.PreselectMode.None,
+    -- preselect = cmp.PreselectMode.None,
     cmp.setup {
       formatting = {
         format = lspkind.cmp_format({with_text = true, maxwidth = 50})
+      },
+      completion = {
+        completeopt = "menuone,menu,noinsert"
       }
     }
   }
