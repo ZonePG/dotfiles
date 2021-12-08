@@ -88,7 +88,7 @@ cmp.setup(
         format = lspkind.cmp_format({with_text = true, maxwidth = 50})
       },
       completion = {
-        completeopt = "menuone,menu,noinsert"
+        completeopt = "menu,menuone,noinsert"
       }
     }
   }

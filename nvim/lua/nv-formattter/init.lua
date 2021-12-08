@@ -82,7 +82,7 @@ vim.api.nvim_exec(
   [[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.go,*.lua FormatWrite
+  autocmd BufWritePost *.go,*.lua,*.cpp,*.c FormatWrite
 augroup END
 ]],
   true
