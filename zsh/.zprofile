@@ -18,13 +18,6 @@ if [[ `uname` == "Darwin" ]]; then
 
   # mips
   export PATH=/opt/toolchain/mips-gcc-4.8.1/bin:$PATH
-  # qemu
-  # export PATH=/opt/qemu/build:$PATH
-  # export PATH=/opt/qemu/build/riscv64-softmmu:$PATH
-  # export PATH=/opt/qemu/build/riscv32-softmmu:$PATH
-  export PATH=/opt/qemu-5.1.0/build/:$PATH
-  export PATH=/opt/qemu-5.1.0/build/riscv64-softmmu:$PATH
-  export PATH=/opt/qemu-5.1.0/build/riscv32-softmmu:$PATH
   export PATH="/Applications/Racket v8.2/bin:$PATH"
   export PATH=/opt/homebrew/opt/sqlite3/bin:$PATH
 elif [[ `uname` == "Linux" ]]; then
