@@ -8,8 +8,7 @@ require "lspconfig".pyright.setup {
   root_dir = util.root_pattern(".git") or util.dirname,
   settings = {
     python = {
-      pythonPath = "/opt/homebrew/bin/python3",
-      venvPath = "/opt/homebrew/Caskroom/miniforge/base/envs"
+      pythonPath = "python3"
     }
   }
 }

@@ -37,7 +37,7 @@ return require("packer").startup(
     use "nvim-treesitter/nvim-treesitter-refactor"
 
     -- StatusLine and Bufferline
-    use "glepnir/galaxyline.nvim"
+    use "NTBBloodbath/galaxyline.nvim"
     use {"akinsho/nvim-bufferline.lua", requires = "kyazdani42/nvim-web-devicons"}
 
     -- telescope
@@ -97,5 +97,11 @@ return require("packer").startup(
     use "simrat39/rust-tools.nvim"
 
     use "github/copilot.vim"
+
+    -- markdown
+    use "ellisonleao/glow.nvim"
+
+    -- log
+    use "MTDL9/vim-log-highlighting"
   end
 )
