@@ -37,7 +37,9 @@ require("formatter").setup(
         function()
           return {
             exe = "clang-format",
-            args = {},
+            args = {
+              '-style="{BasedOnStyle: llvm, IndentWidth: 4}"'
+            },
             stdin = true,
             cwd = vim.fn.expand("%:p:h") -- Run clang-format in cwd of the file.
           }
@@ -48,7 +50,9 @@ require("formatter").setup(
         function()
           return {
             exe = "clang-format",
-            args = {},
+            args = {
+              '-style="{BasedOnStyle: llvm, IndentWidth: 4}"'
+            },
             stdin = true,
             cwd = vim.fn.expand("%:p:h") -- Run clang-format in cwd of the file.
           }
