@@ -18,9 +18,7 @@ local vopts = {
     nowait = true -- use `nowait` when creating keymaps
 }
 
-local vmappings = {
-    ["/"] = {":CommentToggle<CR>", "Comment"}
-}
+local vmappings = {}
 
 wk.setup {
     plugins = {

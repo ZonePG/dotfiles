@@ -399,10 +399,13 @@ packer.startup(
                 end
             }
 
+            -- 启动界面
             use {
-                "glepnir/dashboard-nvim",
+                "startup-nvim/startup.nvim",
+                requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
                 config = function()
-                    require("conf.dashboard")
+                    vim.g.startup_disable_on_startup = true
+                    require("startup").setup({theme = "dashboard"}) -- put theme name here
                 end
             }
 
