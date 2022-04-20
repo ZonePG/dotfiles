@@ -1,7 +1,3 @@
--- vim.o.keyword="+=-"                     -- treat dash separated words as a word text object"
--- vim.o.shortmess="+=c"                     -- Don't pass message to |ins-completion-menu|.
--- vim.o.formatoptions="-=cro"                  -- Stop newline continution of comments
-
 -- -- 设定各种文本的字符编码
 vim.o.encoding = "utf-8"
 -- 设定在无操作时，交换文件刷写到磁盘的等待毫秒数（默认为 4000）

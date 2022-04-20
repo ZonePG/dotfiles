@@ -1,9 +1,9 @@
 -- 自动切换输入法（Fcitx 框架）
 vim.g.ImSelectToggleInput = function()
-  local input_status = tonumber(vim.fn.system("im-select"))
-  if input_status == nil then
-    vim.fn.system("im-select com.apple.keylayout.ABC")
-  end
+    local input_status = tonumber(vim.fn.system("im-select"))
+    if input_status == nil then
+        vim.fn.system("im-select com.apple.keylayout.ABC")
+    end
 end
 
 -- vim.cmd("autocmd InsertLeave * call ImSelectToggleInput()")

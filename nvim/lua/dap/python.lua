@@ -12,9 +12,7 @@ return {
             request = "launch",
             name = "Launch file",
             program = "${file}",
-            pythonPath = function()
-                return vim.g.python_path
-            end
+            python_path = "python3"
         }
     }
 }
