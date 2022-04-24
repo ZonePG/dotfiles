@@ -314,14 +314,6 @@ packer.startup(
                 end
             }
 
-            -- 扩展 LSP 诊断
-            use {
-                "mfussenegger/nvim-lint",
-                config = function()
-                    require("conf.nvim-lint")
-                end
-            }
-
             -- 语法高亮
             use {
                 "nvim-treesitter/nvim-treesitter",
