@@ -21,7 +21,6 @@ local servers = {
     gopls = require("lsp.gopls"),
     jsonls = require("lsp.jsonls"),
     sqls = require("lsp.sqls"),
-    vuels = require("lsp.vuels"),
     rust_analyzer = require("lsp.rust_analyzer"),
     cmake = require("lsp.cmake"),
     clangd = require("lsp.clangd"),
