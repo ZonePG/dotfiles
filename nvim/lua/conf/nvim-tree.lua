@@ -24,7 +24,7 @@ require("nvim-tree").setup(
         git = {
             -- 是否启用 git 信息
             enable = true,
-            ignore = true,
+            ignore = false,
             timeout = 500
         }
     }

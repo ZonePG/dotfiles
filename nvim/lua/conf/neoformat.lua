@@ -30,11 +30,11 @@ let g:neoformat_c_clangformat = {
 ]]
 )
 
-vim.cmd([[
-augroup fmt
-    autocmd!
-    autocmd BufWritePre * undojoin | Neoformat
-augroup END
-]])
+-- vim.cmd([[
+-- augroup fmt
+--     autocmd!
+--     autocmd BufWritePre * undojoin | Neoformat
+-- augroup END
+-- ]])
 
 vim.keybinds.gmap("n", "<leader>cf", "<cmd>Neoformat<CR>", vim.keybinds.opts)
