@@ -20,7 +20,6 @@ local servers = {
     cssls = require("lsp.cssls"),
     gopls = require("lsp.gopls"),
     jsonls = require("lsp.jsonls"),
-    zeta_note = require("lsp.zeta_note"),
     sqls = require("lsp.sqls"),
     vuels = require("lsp.vuels"),
     rust_analyzer = require("lsp.rust_analyzer"),
