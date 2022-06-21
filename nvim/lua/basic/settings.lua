@@ -45,9 +45,9 @@ vim.o.ignorecase = true
 -- 是否开启在搜索时如果有大写字母，则关闭忽略大小写的选项
 vim.o.smartcase = true
 -- 是否开启单词拼写检查
-vim.o.spell = true
+-- vim.o.spell = true
 -- 设定单词拼写检查的语言
-vim.o.spelllang = "en_us,cjk"
+-- vim.o.spelllang = "en_us,cjk"
 -- 是否开启代码折叠
 vim.o.foldenable = true
 -- 指定代码折叠的策略是按照缩进进行的

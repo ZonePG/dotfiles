@@ -6,7 +6,7 @@ local dapui = require("dapui")
 -- 初始化调试界面
 dapui.setup(
     {
-        sidebar = {
+        layout = {
             -- dapui 的窗口设置在右边
             position = "right"
         }
