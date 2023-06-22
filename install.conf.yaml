@@ -20,6 +20,8 @@
       path: nvim
     ~/.config/starship.toml:
       path: starship.toml
+    ~/.condarc:
+      path: .condarc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
