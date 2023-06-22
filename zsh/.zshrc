@@ -1,9 +1,5 @@
 setopt no_nomatch
 
-if [ -f ~/.config/zsh/.aliases ]; then
-  source ~/.config/zsh/.aliases
-fi
-
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -82,3 +78,4 @@ zinit light-mode for \
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
 eval "$(starship init zsh)"
+eval "$(lua /home/zonepg/.local/share/z.lua/z.lua --init zsh)"
