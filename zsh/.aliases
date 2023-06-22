@@ -8,4 +8,3 @@ alias ga="git add"
 alias gc="git commit"
 alias gl="git log --all --graph --decorate"
 alias mv="mv -i"
-alias aq=asciiquarium
