@@ -5,6 +5,8 @@ export LANG="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 # zsh color
 export CLICOLOR=1
+# cmake cpm
+export CPM_SOURCE_CACHE=$HOME/.cache/CPM
 
 if [[ `uname` == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
