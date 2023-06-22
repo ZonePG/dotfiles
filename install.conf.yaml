@@ -22,6 +22,8 @@
       path: starship.toml
     ~/.condarc:
       path: .condarc
+    ~/.clang-format:
+      path: .clang-format
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
