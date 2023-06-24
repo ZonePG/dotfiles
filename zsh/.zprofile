@@ -15,6 +15,7 @@ if [[ `uname` == "Darwin" ]]; then
   # iverilog
   export PATH=/Users/zoupeng/verilog/iverilog/installed/bin:$PATH
   export PATH=/Applications/gtkwave.app/Contents/Resources/bin/:$PATH
+  export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
   export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
   # mips
