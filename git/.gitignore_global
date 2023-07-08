@@ -3,3 +3,4 @@ build
 .cache
 *.pyc
 events.out.tfevents*
+output_dir
