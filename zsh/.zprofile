@@ -27,6 +27,7 @@ if [[ `uname` == "Darwin" ]]; then
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
   export GOPATH=$HOME/go
   export PATH=$GOPATH/bin:$PATH
+  export HOMEBREW_NO_INSTALL_FROM_API=1
 elif [[ `uname` == "Linux" ]]; then
   export CUDA_HOME=/usr/local/cuda
   export PATH=/usr/local/cuda/bin:$PATH
