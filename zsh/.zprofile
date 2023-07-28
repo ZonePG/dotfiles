@@ -34,6 +34,6 @@ elif [[ `uname` == "Linux" ]]; then
   export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
   export LD_LIBRARY_PATH=/opt/lib:$LD_LIBRARY_PATH
   # c++
-  export CC=/usr/bin/clang
-  export CXX=/usr/bin/clang++
+  export CC=/usr/bin/gcc
+  export CXX=/usr/bin/gcc++
 fi
