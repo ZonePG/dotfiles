@@ -19,7 +19,6 @@ if [[ `uname` == "Darwin" ]]; then
   export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
   export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
   # mips
-  export PATH=/opt/toolchain/mips-gcc-4.8.1/bin:$PATH
   export PATH="/Applications/Racket v8.2/bin:$PATH"
   export PATH=/opt/homebrew/opt/sqlite3/bin:$PATH
   export NVM_DIR="$HOME/.nvm"
