@@ -1,6 +1,4 @@
 # proxy
-export http_proxy=http://127.0.0.1:7890
-export https_proxy=$http_proxy
 export LANG="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 # zsh color
@@ -35,4 +33,5 @@ elif [[ `uname` == "Linux" ]]; then
   # c++
   export CC=/usr/bin/gcc
   export CXX=/usr/bin/g++
+  export PATH=$HOME/.cargo/bin:$PATH
 fi
