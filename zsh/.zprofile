@@ -20,11 +20,15 @@ if [[ `uname` == "Darwin" ]]; then
   export PATH="/Applications/Racket v8.2/bin:$PATH"
   export PATH=/opt/homebrew/opt/sqlite3/bin:$PATH
   export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
   export GOPATH=$HOME/go
   export PATH=$GOPATH/bin:$PATH
   export HOMEBREW_NO_INSTALL_FROM_API=1
+  export PATH="/Users/zoupeng/postgres/pg15/bin:$PATH"
+  export LD_LIBRARY_PATH="/Users/zoupeng/postgres/pg15/lib:$LD_LIBRARY_PATH"
+  export PGHOME="/Users/zoupeng/postgres/pg15"
+  export PGDATA="/Users/zoupeng/postgres/pgdata"
 elif [[ `uname` == "Linux" ]]; then
   export CUDA_HOME=/usr/local/cuda
   export PATH=/usr/local/cuda/bin:$PATH
