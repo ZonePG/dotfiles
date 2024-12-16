@@ -30,12 +30,19 @@ if [[ `uname` == "Darwin" ]]; then
   export PGHOME="/Users/zoupeng/postgres/pg15"
   export PGDATA="/Users/zoupeng/postgres/pgdata"
 elif [[ `uname` == "Linux" ]]; then
-  export CUDA_HOME=/usr/local/cuda
-  export PATH=/usr/local/cuda/bin:$PATH
-  export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-  export LD_LIBRARY_PATH=/opt/lib:$LD_LIBRARY_PATH
+  export CMAKE_BUILD_PARALLEL_LEVEL=32
+  export CUDA_HOME=/usr/local/cuda-12.4
+  export CUDACXX=$CUDA_HOME/bin/nvcc
+  export NCCL_LIB_DIR=$CUDA_HOME/lib64
+  export NCCL_INCLUDE_DIR=$CUDA_HOME/include
+  export PATH=$CUDA_HOME/bin:$PATH
+  export CUTLASS_DIR=$HOME/code/cutlass
+  export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+  export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
   # c++
   export CC=/usr/bin/gcc
   export CXX=/usr/bin/g++
   export PATH=$HOME/.cargo/bin:$PATH
 fi
+
+export HF_ENDPOINT=https://hf-mirror.com
