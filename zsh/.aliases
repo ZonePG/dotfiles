@@ -3,8 +3,105 @@ alias vim="nvim"
 alias vi="nvim"
 alias ll="ls --color=auto -la"
 alias ls="ls --color=auto"
+alias mv="mv -i"
+
+## Git 相关
 alias gs="git status"
 alias ga="git add"
-alias gc="git commit"
-alias gl="git log --all --graph --decorate"
-alias mv="mv -i"
+# 创建新的 branch
+alias gcb="git checkout -b"
+# 提交 commit
+alias gcm="git commit -m"
+# 切换 branch
+alias gc="git checkout"
+# 推送本地新创建的 branch 到远端
+alias gpso='git push --set-upstream origin "$(git symbolic-ref --short HEAD)"'
+# 推送本地 branch 到远端
+alias gp="git push"
+# 查看本地 branch
+alias gb="git branch"
+# 拉取远端 branch
+alias gpr="git pull --rebase"
+# 添加所有文件
+alias ga="git add -A"
+# 查看 commit 树
+alias glg="git log --graph --oneline --decorate --abbrev-commit --all"
+# 查看 commit 表格
+alias gl="git log"
+# 用 soft方式重置 git 提交
+alias grs="git reset --soft"
+
+## Devlop 需求
+# 运行 pre-commit
+alias pre="pre-commit run --show-diff-on-failure --color=always --all-files"
+# 用人类可理解的格式查看当前路径下磁盘空间使用量
+alias duh="du -hs"
+# 查看磁盘空间使用量
+alias dfh="df -h"
+# 查看当前路径下的文件树
+alias tr="tree -FLCN 2"
+# 查看当前路径下的文件夹
+alias trd="tree -FLCNd 2"
+# 每 0.1 秒读取当前路径下的磁盘空间使用量，特别在下载模型的时候很好用
+alias wd="watch -n 0.1 du -hs"
+# 流式读取文件的尾部内容，可以在 tmux 中提交任务然后退出 tmux，在命令行使用这个命令查看任务的 log
+alias tf="tail -f"
+# 设置文件权限为完全透明
+alias c7="chmod 777 -R"
+# 快速查看 GPU 使用情况
+alias nvitop="pipx run nvitop"
+# 每 1 秒查看 GPU 使用情况，需要先 pip install gpustat
+alias gpu="watch -n 1 gpustat"
+# 创建 tmux 会话
+alias tns="tmux new -s"
+# 列出 tmux 会话
+alias tls="tmux ls"
+# 重新登录回到某个 tmux 会话
+alias tat="tmux attach -t"
+# 杀死进程
+alias k9="kill -9"
+# 杀死自己名下的所有 python 进程，慎用
+alias kp="ps aux | grep '[p]ython' | awk '{print \$2}' | xargs -r kill -9"
+
+
+proxy() {
+    export http_proxy=http://127.0.0.1:7890
+    export https_proxy=$http_proxy
+    echo "http proxy on"
+}
+
+no_proxy() {
+    unset http_proxy
+    unset https_proxy
+    echo "http proxy off"
+}
+
+# 用于分配显卡的函数，al k 可以分配 k 张空闲的卡，
+function al() {
+    local num_gpus=$1
+    
+    echo "Looking for $num_gpus free GPUs..."
+    echo "Checking GPU memory usage:"
+    nvidia-smi --query-gpu=memory.used,index --format=csv,noheader,nounits
+    
+    local gpu_ids=$(nvidia-smi --query-gpu=memory.used,index --format=csv,noheader,nounits | 
+                   awk -F, '{
+                       gsub(/ /, "", $1); 
+                       gsub(/ /, "", $2);
+                       if ($1 + 0 < 100) print $2
+                   }' | 
+                   head -n $num_gpus)
+    
+    local found_count=$(echo "$gpu_ids" | wc -l)
+    
+
+    if [ $found_count -eq $num_gpus ]; then
+        gpu_ids=$(echo "$gpu_ids" | paste -sd "," -)
+        export CUDA_VISIBLE_DEVICES=$gpu_ids
+        echo "CUDA_VISIBLE_DEVICES set to: $CUDA_VISIBLE_DEVICES"
+        return 0
+    else
+        echo "Error: Requested $num_gpus GPUs but only found $found_count free GPUs"
+        return 1
+    fi
+}

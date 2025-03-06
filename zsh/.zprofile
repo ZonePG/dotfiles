@@ -45,4 +45,6 @@ elif [[ `uname` == "Linux" ]]; then
   export PATH=$HOME/.cargo/bin:$PATH
 fi
 
+# Created by `pipx` on 2025-01-07 09:33:53
+export PATH=$HOME/.local/bin:$PATH
 export HF_ENDPOINT=https://hf-mirror.com

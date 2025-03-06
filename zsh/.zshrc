@@ -80,18 +80,6 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 eval "$(starship init zsh)"
 eval "$(lua $HOME/.local/share/z.lua/z.lua --init zsh)"
 
-proxy() {
-    export http_proxy=http://127.0.0.1:7890
-    export https_proxy=$http_proxy
-    echo "http proxy on"
-}
-
-no_proxy() {
-    unset http_proxy
-    unset https_proxy
-    echo "http proxy off"
-}
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
