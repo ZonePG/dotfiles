@@ -26,6 +26,8 @@
       path: .clang-format
     ~/.config/pip/pip.conf:
       path: pip.conf
+    ~/.config/tmux:
+      path: tmux
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
