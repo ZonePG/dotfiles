@@ -19,9 +19,6 @@ if [[ `uname` == "Darwin" ]]; then
   # mips
   export PATH="/Applications/Racket v8.2/bin:$PATH"
   export PATH=/opt/homebrew/opt/sqlite3/bin:$PATH
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
   export GOPATH=$HOME/go
   export PATH=$GOPATH/bin:$PATH
   export HOMEBREW_NO_INSTALL_FROM_API=1
@@ -48,3 +45,7 @@ fi
 # Created by `pipx` on 2025-01-07 09:33:53
 export PATH=$HOME/.local/bin:$PATH
 export HF_ENDPOINT=https://hf-mirror.com
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
