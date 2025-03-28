@@ -16,8 +16,8 @@
       path: .zshrc
     ~/.config/zsh:
       path: zsh
-    # ~/.config/nvim:
-    #   path: nvim
+    ~/.config/nvim:
+      path: nvim
     ~/.config/starship.toml:
       path: starship.toml
     ~/.condarc:
