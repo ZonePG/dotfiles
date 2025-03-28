@@ -1,4 +1,3 @@
-
 // Place your key bindings in this file to override the defaults
 [
     {
@@ -32,5 +31,13 @@
     {
         "key": "cmd+w",
         "command": "-workbench.action.closeActiveEditor"
-    }
+    },
+    {
+        "key": "shift+l",
+        "command": "workbench.action.nextEditor",
+    },
+    {
+        "key": "shift+h",
+        "command": "workbench.action.previousEditor",
+    },
 ]
