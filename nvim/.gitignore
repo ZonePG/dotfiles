@@ -1,5 +1,8 @@
-autoload/
-.netrwhist
-session/
-plugin/
-ls/
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
