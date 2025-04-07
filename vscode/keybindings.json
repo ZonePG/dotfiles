@@ -33,11 +33,23 @@
         "command": "-workbench.action.closeActiveEditor"
     },
     {
-        "key": "shift+l",
-        "command": "workbench.action.nextEditor",
+        "key": "enter",
+        "command": "workbench.action.terminal.findNext",
+        "when": "terminalFindInputFocused && terminalHasBeenCreated || terminalFindInputFocused && terminalProcessSupported"
     },
     {
-        "key": "shift+h",
-        "command": "workbench.action.previousEditor",
+        "key": "shift+enter",
+        "command": "-workbench.action.terminal.findNext",
+        "when": "terminalFindInputFocused && terminalHasBeenCreated || terminalFindInputFocused && terminalProcessSupported"
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.findPrevious",
+        "when": "terminalFindInputFocused && terminalHasBeenCreated || terminalFindInputFocused && terminalProcessSupported"
+    },
+    {
+        "key": "enter",
+        "command": "-workbench.action.terminal.findPrevious",
+        "when": "terminalFindInputFocused && terminalHasBeenCreated || terminalFindInputFocused && terminalProcessSupported"
     },
 ]
