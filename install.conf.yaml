@@ -20,12 +20,8 @@
       path: nvim
     ~/.config/starship.toml:
       path: starship.toml
-    ~/.condarc:
-      path: .condarc
     ~/.clang-format:
       path: .clang-format
-    ~/.config/pip/pip.conf:
-      path: pip.conf
     ~/.config/tmux:
       path: tmux
 

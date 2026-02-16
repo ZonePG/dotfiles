@@ -77,20 +77,25 @@ zinit light-mode for \
 zinit load zdharma-continuum/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
-eval "$(starship init zsh)"
-eval "$(lua $HOME/.local/share/z.lua/z.lua --init zsh)"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/miniconda3/etc/profile.d/conda.sh"
+# Install Starship prompt if not present
+if ! command -v starship &>/dev/null; then
+    print -P "%F{33} %F{220}Installing %F{33}Starship%F{220} prompt…%f"
+    curl -sS https://starship.rs/install.sh | sh -s -- -y
+fi
+eval "$(starship init zsh)"
+
+# Lua + z.lua: ensure installed, then init z.lua
+if ! command -v lua &>/dev/null && ! command -v lua5.4 &>/dev/null; then
+    print -P "%F{33} %F{220}Installing %F{33}Lua%F{220}…%f"
+    if [[ "$(uname)" == "Darwin" ]]; then
+        brew install lua
     else
-        export PATH="$HOME/miniconda3/bin:$PATH"
+        apt update && apt install -y lua5.4
     fi
 fi
-unset __conda_setup
-# <<< conda initialize <<<
+if [[ ! -f $HOME/.local/share/z.lua/z.lua ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}z.lua%F{220}…%f"
+    command git clone https://github.com/skywind3000/z.lua.git "$HOME/.local/share/z.lua"
+fi
+eval "$(lua $HOME/.local/share/z.lua/z.lua --init zsh)"

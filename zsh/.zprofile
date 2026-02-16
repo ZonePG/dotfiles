@@ -1,3 +1,4 @@
+export SHELL=$(which zsh)
 # proxy
 export LANG="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
@@ -28,7 +29,7 @@ if [[ `uname` == "Darwin" ]]; then
   export PGDATA="/Users/zoupeng/postgres/pgdata"
 elif [[ `uname` == "Linux" ]]; then
   export CMAKE_BUILD_PARALLEL_LEVEL=32
-  export CUDA_HOME=/usr/local/cuda-12.4
+  export CUDA_HOME=/usr/local/cuda
   export CUDACXX=$CUDA_HOME/bin/nvcc
   export NCCL_LIB_DIR=$CUDA_HOME/lib64
   export NCCL_INCLUDE_DIR=$CUDA_HOME/include
